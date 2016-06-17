@@ -1,0 +1,127 @@
+/* COLOUR REFERENCES
+Red (buttons): #FF2B06;
+Red lighter: ;
+Grey(text): #555555;
+*/
+
+/*--------------------------------------------------------------
+# GENERAL
+--------------------------------------------------------------*/
+body {
+  font-family: 'ubuntu', Helvetica, sans-serif;
+  font-size: 16px;
+
+}
+
+/*--------------------------------------------------------------
+# Global
+--------------------------------------------------------------*/
+h1,h2,h3,h4,h5,h6 {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h1,h2 {
+  margin: 0 0 40px;
+}
+
+h3 {
+  margin: 20px 0;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+
+/*--------------------------------------------------------------
+# Home
+--------------------------------------------------------------*/
+#home {
+  background: url('../img/bg-header.jpeg') top no-repeat;
+  min-height: 750px;
+  color: white;
+}
+
+
+.navbar-brand>img {
+
+  height: 100%;
+  margin: auto;
+  padding: 3px;
+  width: auto;
+}
+
+/*--------------------------------------------------------------
+# Speakers
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Venue
+--------------------------------------------------------------*/
+#venue {
+  height: 500px;
+}
+
+/*--------------------------------------------------------------
+# Agenda
+--------------------------------------------------------------*/
+
+ul.timeline {
+position: relative;
+list-style-type: none;
+padding-left: 180px;
+&:before {
+  position: absolute;
+  display: block;
+  left: 136px;
+  width: 8px;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #FF2B06;
+  content: ' ';
+}
+
+.timeline-item {
+  position: relative;
+  padding: 16px;
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+  padding: 16px;
+  margin-bottom: 30px;
+  &:before {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: -55px;
+    width: 30px;
+    height: 30px;
+    border: 6px solid #FF2B06;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 4px -1px rgba(0,0,0,0.6);
+    content: ' ';
+  }
+}
+
+.time {
+    position: absolute;
+    display: block;
+    width: 120px;
+    top: 35px;
+    left: -179px;
+    font-size: 0.9em;
+    text-align: right;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+
