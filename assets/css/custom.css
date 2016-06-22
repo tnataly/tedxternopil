@@ -8,7 +8,7 @@ Grey(text): #555555;
 # GENERAL
 --------------------------------------------------------------*/
 body {
-  font-family: 'ubuntu', Helvetica, sans-serif;
+  font-family: "Ubuntu", Helvetica, sans-serif;
   font-size: 16px;
 
 }
@@ -38,16 +38,43 @@ h4 {
   font-size: 18px;
 }
 
+.btn-ted {
+  background-color: #FF2B06;
+  box-shadow: 0px 1px 3.92px 0.08px rgba(0, 0, 0, 0.35);
+  font-size: 1.125em;
+  /*font-family: "Source Sans Pro";*/
+  color: white;
+  text-transform: uppercase;
+  line-height: 1.444;
+  padding: 10px 50px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.section-title {
+  margin-top: 50px;
+  font-size: 2.625em;
+  font-family: "Ubuntu";
+  color: rgb(34, 34, 34);
+  line-height: 1.357;
+
+}
 
 /*--------------------------------------------------------------
-# Home
+# Header
 --------------------------------------------------------------*/
-#home {
-  background: url('../img/bg-header.jpeg') top no-repeat;
-  min-height: 750px;
+.navbar.navbar-fixed-top.navbar-bg{
+  /*background-color: rgba(0,0,0, 0.6);*/
+}
+
+.navbar-nav>li>a {
   color: white;
 }
 
+.navbar-brand {
+  padding: 3px;
+}
 
 .navbar-brand>img {
 
@@ -57,16 +84,107 @@ h4 {
   width: auto;
 }
 
+
+/*--------------------------------------------------------------
+# Home
+--------------------------------------------------------------*/
+#home {
+  min-height: 750px;
+  color: rgb(255, 255, 255);
+  background: url('../img/bg-header.jpeg') center no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  padding-top: 50px;
+}
+
+.banner-text {
+  margin-top: 100px;
+  margin-left: 50px;
+
+}
+
+.banner-text h1 {
+  font-size: 2.625em;
+  font-weight: bold;
+  line-height: 1.19;
+  text-align: left;
+}
+
+.banner-text p {
+  /*font-family: "Source Sans Pro";*/
+  font-weight: lighter;
+  line-height: 1.625;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+ul.home-social-links {
+  list-style-type: none;
+
+}
+
+.home-social-links > li > a {
+  color: #555555;
+}
+
+.home-social-links > li {
+  margin: 10px;
+}
+
+.home-social-links > li > a > i {
+  font-size: 20px;
+}
+
+.home-social-links img {
+
+}
 /*--------------------------------------------------------------
 # Speakers
 --------------------------------------------------------------*/
+.speaker {
+  text-align: center;
+}
 
+.speaker img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  border: 3px solid red;
+  margin: auto;
+
+}
+
+.speaker h3 {
+  font-size: 1.250em;
+  color: rgb(34, 34, 34);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.5;
+
+
+}
+
+.speaker h4 {
+  font-size: 0.813em;
+  /*font-family: "Source Sans Pro";*/
+  color: rgb(85, 85, 85);
+  line-height: 1.769;
+
+
+}
 
 /*--------------------------------------------------------------
 # Venue
 --------------------------------------------------------------*/
 #venue {
   height: 500px;
+
+}
+
+#venue>.venue-text {
+  position: relative;
+  z-index:2;
+  background: white;
 }
 
 /*--------------------------------------------------------------
