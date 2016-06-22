@@ -58,7 +58,7 @@ h4 {
   font-family: "Ubuntu";
   color: rgb(34, 34, 34);
   line-height: 1.357;
-
+  text-transform: uppercase;
 }
 
 /*--------------------------------------------------------------
@@ -149,7 +149,8 @@ ul.home-social-links {
   border-radius: 50%;
   height: 200px;
   width: 200px;
-  border: 3px solid red;
+  border: 2px solid red;
+  box-shadow: 0px 4px 3.92px 0.08px rgba(0, 0, 0, 0.35);
   margin: auto;
 
 }
@@ -176,17 +177,51 @@ ul.home-social-links {
 /*--------------------------------------------------------------
 # Venue
 --------------------------------------------------------------*/
+/*
 #venue {
+  position: static;
   height: 500px;
-
+  width: 100%;
+  position: absolute;
 }
 
-#venue>.venue-text {
-  position: relative;
-  z-index:2;
+#map {
+  height: 100%;
+  z-index: 1;
+  width: 100%;
+  /*position: absolute;
+}
+
+#venue .venue-text {
+  z-index: 2;
   background: white;
+  position: relative;
+  top: 0;
+  right: 0;
+  opacity: .45;
+  height: 100%
+}
+*/
+
+
+#venue {
+  background: url('../img/google_map.jpg') center no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  height: 500px;
 }
 
+.venue-text {
+  height: 100%;
+  background-color: #FF2B06;
+  opacity: 0.75;
+  color: white;
+}
+
+.venue-text h2 {
+  padding-top: 100px;
+  color: white;
+}
 /*--------------------------------------------------------------
 # Agenda
 --------------------------------------------------------------*/
@@ -241,5 +276,60 @@ padding-left: 180px;
     text-transform: uppercase;
 }
 
+/*--------------------------------------------------------------
+# News
+--------------------------------------------------------------*/
+.news-item {
+  height: 200px;
+}
+
+.news-item img {
+  max-height: 60%;
+}
+
+/*--------------------------------------------------------------
+# Partners
+--------------------------------------------------------------*/
+
+.partners-item {
+  height: 100px;
+  text-align: center;
+}
+
+.partners-item img {
+  max-height: 100px;
+}
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
 
 
+#team {
+  background: url('../img/bg-team.jpg') center no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+
+.team-member {
+    text-align: center;
+}
+
+
+.team-member img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  border: 1px solid white;
+  margin: auto;
+
+}
+
+.team-member h3 {
+  font-size: 1.250em;
+  color: white;
+  font-weight: bold;
+  line-height: 1.5;
+
+
+}
