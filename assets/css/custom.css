@@ -193,17 +193,26 @@ ul.home-social-links {
 
 }
 
-.speaker a:hover {
+.speaker h3:hover {
+  font-size: 1.313em;
+}
+
+.speaker a:hover, .speaker a:active, .speaker a:focus {
   text-decoration: none;
+  outline: none;
+  border: none;
 }
 
 .speaker h4 {
-  font-size: 1em;
+  font-size: 1.1em;
   /*font-family: "Source Sans Pro";*/
   color: rgb(85, 85, 85);
   line-height: 1.769;
+  font-weight: lighter;
+}
 
-
+.speaker h4:hover {
+  font-size: 1.125em;
 }
 
 /*--------------------------------------------------------------
@@ -325,11 +334,17 @@ ul.home-social-links {
   width: 150px;
   border: 2px solid white;
   margin: auto;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
 
 }
 
-.team-member a {
-  font-size: 1em;
+.team-member a, .team-member h3 {
+  font-size: 1.125em;
   color: white;
   font-weight: bold;
   line-height: 1.5;
@@ -429,3 +444,48 @@ footer p {
   text-decoration: underline;
 }
 
+/*--------------------------------------------------------------
+# Lightbox
+--------------------------------------------------------------*/
+
+.speaker-lightbox {
+  background-color: #FF2B06;
+  color: white;
+}
+
+.speaker-lightbox p a, .speaker-lightbox .close {
+  color: white;
+  opacity: .8;
+}
+
+.speaker-lightbox .speaker-image {
+  border: 2px solid white;
+}
+
+.speaker-lightbox .speaker-image img{
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
+  -o-filter: none;
+  filter: none;
+  filter: none; / IE 6-9 /
+}
+
+.speaker-lightbox h3{
+  font-size: 1.250em;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.speaker-lightbox h4{
+  font-weight: lighter;
+  font-size: 1.1em;
+}
+
+.speaker-lightbox p{
+  font-weight: lighter;
+  font-size: 1em;
+  margin: 0 20px 10px;
+
+}
