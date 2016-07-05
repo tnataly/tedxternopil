@@ -1,43 +1,43 @@
 <?php
-session_cache_limiter('nocache');
-header('Expires: ' . gmdate('r', 0));
-header('Content-type: application/json');
+// configure
+$from = 'tedxternopil contact form <contact@tedxternopil.com>';
+$sendTo = 'Nataly Tkachuk <ny.tkachuk@gmail.com>';
+$subject = 'New message from contact form';
+$fields = array('name' => 'Name', 'email' => 'Email', 'message' => 'Message'); // array variable name => Text to appear in email
+$okMessage = "Дякуємо, ваше повідомлення відправлено успішно. Ми з Вами зв'яжемося найближчим часом";
+$errorMessage = 'Трапилась якась прикра помилка. Спробуйте надіслати ще раз пізніше';
 
-$Recipient = 'ny.tkachuk@gmail.com'; // <-- Set your email here
+// let's do the sending
 
-$subject = $_POST['subject'];
+try
+{
+    $emailText = "You have new message from contact form\n=============================\n";
 
-if($Recipient) {
+    foreach ($_POST as $key => $value) {
 
-	$Name = $_POST['contact-name'];
-	$Email = $_POST['contact-email'];
-	$Message = $_POST['contact-words'];
-	$Subject = "Нове повідомлення через контактну форму";
+        if (isset($fields[$key])) {
+            $emailText .= "$fields[$key]: $value\n";
+        }
+    }
 
-	$Email_body = "";
-	$Email_body .= "From: " . $Name . "\n" .
-				   "Email: " . $Email . "\n" .
-				   "Subject: " . $Subject . "\n" .
-				   "Message: " . $Message . "\n" .
+    mail($sendTo, $subject, $emailText, "From: " . $from);
 
-	$Email_headers = "";
-	$Email_headers .= 'From: ' . $Name . ' <' . $Email . '>' . "\r\n".
-					  "Reply-To: " .  $Email . "\r\n";
-
-	$sent = mail($Recipient, $Subject, $Email_body, $Email_headers);
-
-	if ($sent){
-		$emailResult = array ('sent'=>'yes');
-	} else{
-		$emailResult = array ('sent'=>'no');
-	}
-
-	echo json_encode($emailResult);
-
-} else {
-
-	$emailResult = array ('sent'=>'no');
-	echo json_encode($emailResult);
-
+    $responseArray = array('type' => 'success', 'message' => $okMessage);
 }
+catch (\Exception $e)
+{
+    $responseArray = array('type' => 'danger', 'message' => $errorMessage);
+}
+
+if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+    $encoded = json_encode($responseArray);
+
+    header('Content-Type: application/json');
+
+    echo $encoded;
+}
+else {
+    echo $responseArray['message'];
+}
+
 ?>

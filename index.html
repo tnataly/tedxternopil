@@ -31,7 +31,7 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
   <!-- Header ( first section )
   =============================== -->
   <header class="site-header" role="banner">
@@ -52,7 +52,7 @@
           </div><!-- navbar-header -->
           <div class="navbar-collapse collapse navbar-responsive-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="/">Головна</a></li>
+              <li class="active"><a href="#home">Головна</a></li>
               <li><a href="#speakers">Спікери</a></li>
               <li><a href="#venue">Місце проведення</a></li>
               <!--<li><a href="#agenda">Програма</a></li>-->
@@ -73,12 +73,12 @@
   <section id="home">
     <div class="container-fluid clearfix">
       <ul class="pull-right home-social-links">
-        <li><a href="https://www.facebook.com/tedxternopil"><i class="fa fa-facebook-square"></i></a></li>
-        <li><a href="http://www.instagram.com/tedxternopil"><i class="fa fa-instagram"></i></a></li>
-        <li><a href="https://www.ted.com/tedx/events/19703"><img src="assets/img/TED_logo.png" alt="TED logo"></a></li>
+        <li><a href="https://www.facebook.com/tedxternopil" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+        <li><a href="http://www.instagram.com/tedxternopil" target="_blank"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.ted.com/tedx/events/19703" target="_blank"><img src="assets/img/TED_logo.png" alt="TED logo"></a></li>
       </ul>
       <div class="row">
-        <div class="col-sm-6 col-xs-12 col-md-4 banner-text">
+        <div class="col-sm-6 col-xs-12 col-md-6 banner-text">
           <h1>1 жовтня, 2016</h1>
           <p>TED — відома на весь світ щорічна конференція, присвячена «ідеям вартим поширення». Конференція TED відома своїми лекціями, які охоплюють технології, розваги, дизайн, природничі науки, мистецтво, освіту, культуру, бізнес, глобальні проблеми та сталий розвиток — теми, що формують наше майбутнє.<p>
           <a href="https://tickerry.com/event/tedxternopil-scenario-small-cities/" class="btn btn-ted">Придбати квиток</a>
@@ -333,26 +333,25 @@
 
       <div class="col-md-5 third-column-footer">
         <h3>Напишіть нам</h3>
-          <div class="alert alert-success hidden" id="MessageSent">
-            Ми отримали ваше повідомлення і дуже скоро вам відповімо.
-          </div>
-          <div class="alert alert-danger hidden" id="MessageNotSent">
-            Ой, щось пішло не так. Спробуйте надісляти листа ще раз.
-          </div>
-        <form role="form" class="contact-form">
-          <div class="input-group">
-            <input type="text" class="form-control input-lg" id="contact-name" placeholder="Ваше ім'я">
-          </div>
-          <div class="input-group">
-            <input type="text" class="form-control input-lg" id="contact-email" placeholder="Email">
-          </div>
-          <div class="input-group">
-            <textarea class="form-conrol input-lg" id="contact-words" style="" placeholder="Ваше повідомлення" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn btn-lg btn-submit-form disabled">
-            Надіслати
-            <i class="fa fa-paper-plane-o"></i>
-          </button>
+        <form role="form" class="contact-form" id="contact-form" method="post" action="php/email-sender.php">
+          <div class="messages"> </div>
+            <div class="controls">
+            <div class="input-group">
+              <input type="text" class="form-control input-lg" id="name" placeholder="Ваше ім'я" required="required" data-error="Вкажіть, будь-ласка, як до Вас звертатися">
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control input-lg" id="email" placeholder="Email" required="required" data-error="Вкажіть, будь-ласка, свою електронну адресу для зв'язку">
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="input-group">
+              <textarea class="form-conrol input-lg" id="message" style="" placeholder="Ваше повідомлення" rows="3" required="required" data-error="Вкажіть, будь-ласка, своє повідомлення"></textarea>
+            </div>
+            <button type="submit" class="btn btn-lg btn-submit-form">
+              Надіслати
+              <i class="fa fa-paper-plane-o"></i>
+            </button>
+          </div><!-- controls -->
         </form>
       </div><!-- col-md-5 -->
 
