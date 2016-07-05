@@ -425,6 +425,10 @@ footer p {
 
 }
 
+.contact-form .form-control {
+  color: white;
+}
+
 .contact-form .form-control, #contact-words {
   background-color: #222;
 }

@@ -335,23 +335,23 @@
         <h3>Напишіть нам</h3>
         <form role="form" class="contact-form" id="contact-form" method="post" action="php/email-sender.php">
           <div class="messages"> </div>
-            <div class="controls">
+
             <div class="input-group">
-              <input type="text" class="form-control input-lg" id="name" placeholder="Ваше ім'я" required="required" data-error="Вкажіть, будь-ласка, як до Вас звертатися">
+              <input type="text" class="form-control input-lg" name="name" placeholder="Ваше ім'я" required="required" data-error="Вкажіть, будь-ласка, як до Вас звертатися">
               <div class="help-block with-errors"></div>
             </div>
             <div class="input-group">
-              <input type="text" class="form-control input-lg" id="email" placeholder="Email" required="required" data-error="Вкажіть, будь-ласка, свою електронну адресу для зв'язку">
+              <input type="text" class="form-control input-lg" name="email" placeholder="Email" required="required" data-error="Вкажіть, будь-ласка, свою електронну адресу для зв'язку">
               <div class="help-block with-errors"></div>
             </div>
             <div class="input-group">
-              <textarea class="form-conrol input-lg" id="message" style="" placeholder="Ваше повідомлення" rows="3" required="required" data-error="Вкажіть, будь-ласка, своє повідомлення"></textarea>
+              <textarea class="form-conrol input-lg" name="message" id="contact-words" placeholder="Ваше повідомлення" rows="3" required="required" data-error="Вкажіть, будь-ласка, своє повідомлення"></textarea>
             </div>
             <button type="submit" class="btn btn-lg btn-submit-form">
               Надіслати
               <i class="fa fa-paper-plane-o"></i>
             </button>
-          </div><!-- controls -->
+
         </form>
       </div><!-- col-md-5 -->
 
@@ -488,6 +488,8 @@
   <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
   <script src="assets/js/main.js"></script>
+  <script type="text/javascript" src="assets/js/contact.js"></script>
+  <script type="text/javascript" src="assets/js/va"></script>
 
 </body>
 </html>
