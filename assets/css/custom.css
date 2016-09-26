@@ -272,6 +272,50 @@ ul.home-social-links {
   padding-top: 50px;
 }
 
+.timeline-item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.timeline-item h4 {
+  font-weight: normal;
+}
+
+
+.timeline-item .timeline-item-icon {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #FF2B06;
+  border-radius: 50%;
+  background-color: #FF2B06;
+  color: white;
+  /*padding-left: 11px; */
+
+}
+
+.timeline-item .timeline-item-icon i {
+  padding-top: 9px;
+}
+
+.timeline-item .timeline-item-icon .fa-microphone {
+  /*padding-left: 13px; */
+}
+
+.timeline-item .timeline-item-icon.coffee {
+  padding-left: 9px;
+}
+
+.timeline-item .timeline-item-icon.lunch {
+  padding-left: 12px;
+}
+
+.timeline-item .timeline-item-time {
+  text-align: right;
+}
+
+.timeline-item .uppercase {
+  text-transform: uppercase;
+}
 
 /*--------------------------------------------------------------
 # News
