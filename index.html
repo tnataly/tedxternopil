@@ -235,13 +235,14 @@
   <!-- Venue
   =============================== -->
   <section id="venue">
-    <div id="map">
-    </div>
-    <div class="venue-text col-sm-5 col-sm-offset-7 text-center">
-      <h2 class="section-title">Місце проведення</h2>
-      <h3>Кінотеатр "Палац Кіно"</h3>
-      <h4>вул. Івана Франка, 8 <br>Тернопіль, Україна</h4>
-    </div><!-- col-sm-5 -->
+    <div class="venue-content">
+      <div id="map"></div>
+      <div class="venue-text col-sm-5 col-sm-offset-7 text-center">
+        <h2 class="section-title">Місце проведення</h2>
+        <h3>Кінотеатр "Палац Кіно"</h3>
+        <h4>вул. Івана Франка, 8 <br>Тернопіль, Україна</h4>
+      </div><!-- col-sm-5 -->
+    </div><!-- absolute positioned block over map -->
   </section>
 
  <!-- Agenda
@@ -861,7 +862,26 @@
 
   <!-- Google maps JavaScript
   ================================================== -->
-  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <script>
+      function initMap() {
+        var palacKino = {lat: 49.554508, lng: 25.597816};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: palacKino,
+          scrollwheel: false,
+          zoomControl : false,
+          mapTypeControl: false,
+          streetViewControl: false
+        });
+        var marker = new google.maps.Marker({
+          position: palacKino,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_JW5Tqr7w-zCrGCrcITa6V5oWkgyO85c&callback=initMap">
+    </script>
 
   <script src="assets/js/main.js"></script>
   <script type="text/javascript" src="assets/js/contact.js"></script>

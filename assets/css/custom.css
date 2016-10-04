@@ -248,10 +248,27 @@ ul.home-social-links {
 
 
 #venue {
-  background: url('../img/google_map.jpg') center no-repeat;
-  background-size: cover;
-  -webkit-background-size: cover;
   height: 500px;
+  position: relative;
+  width: 100%;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.venue-content {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.venue-content .section-title {
+  margin-top: 0;
 }
 
 .venue-text {
