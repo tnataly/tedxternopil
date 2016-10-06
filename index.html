@@ -99,7 +99,8 @@
           <h1>1 жовтня, 2016</h1>
           <h2>Сценарії розвитку малих міст</h2>
           <p>На TEDxTernopil спікери поділяться своїми відкритями, досвідом взаємодії та розвитку громади у сфоїх містах, індивідуальними досягненнями та новинками сучасності, що дотичні до кожного. <br> Адже, кожен з нас є частиною міста, де ми живемо!<p>
-          <a href="https://tickerry.com/event/tedxternopil-scenario-small-cities/" class="btn btn-ted">Придбати квиток</a>
+          <!-- Buy ticket button: temporary commented -->
+          <!-- <a href="https://tickerry.com/event/tedxternopil-scenario-small-cities/" class="btn btn-ted">Придбати квиток</a> -->
         </div><!-- col-sm-6>
       </div><!-- row -->
       <div class="row">
@@ -225,21 +226,23 @@
         </a>
       </div><!-- col-md-3 -->
       </div><!-- row -->
-    <div class="row text-center">
+    <!-- Buy ticket button: temporary commented -->
+    <!-- <div class="row text-center">
       <a href="https://tickerry.com/event/tedxternopil-scenario-small-cities/" class="btn btn-ted">Придбати квиток </a>
-    </div>
+    </div> -->
   </section>
 
   <!-- Venue
   =============================== -->
   <section id="venue">
-    <div id="map">
-    </div>
-    <div class="venue-text col-sm-5 col-sm-offset-7 text-center">
-      <h2 class="section-title">Місце проведення</h2>
-      <h3>Кінотеатр "Палац Кіно"</h3>
-      <h4>вул. Івана Франка, 8 <br>Тернопіль, Україна</h4>
-    </div><!-- col-sm-5 -->
+    <div class="venue-content">
+      <div id="map"></div>
+      <div class="venue-text col-sm-5 col-sm-offset-7 text-center">
+        <h2 class="section-title">Місце проведення</h2>
+        <h3>Кінотеатр "Палац Кіно"</h3>
+        <h4>вул. Івана Франка, 8 <br>Тернопіль, Україна</h4>
+      </div><!-- col-sm-5 -->
+    </div><!-- absolute positioned block over map -->
   </section>
 
  <!-- Agenda
@@ -469,9 +472,11 @@
         <p> Об’єднуємо людей, що готові ділитись власними і підтримувати інші ідеї, надихати інших, створювати навколо себе неповторно яскраву та енергійну атмосферу, ініціювати важливі дискусії та втілювати у життя грандіозні ідеї! </p>
       </div><!-- col-lg-6... -->
     </div><!-- container -->
-    <div class="row text-center">
+
+    <!-- Buy ticket button: temporary commented -->
+    <!-- <div class="row text-center">
       <a href="https://tickerry.com/event/tedxternopil-scenario-small-cities/" class="btn btn-ted">Придбати квиток</a>
-    </div>
+    </div> -->
   </section>
 
   <!-- Footer
@@ -857,7 +862,26 @@
 
   <!-- Google maps JavaScript
   ================================================== -->
-  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <script>
+      function initMap() {
+        var palacKino = {lat: 49.554508, lng: 25.597816};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: palacKino,
+          scrollwheel: false,
+          zoomControl : false,
+          mapTypeControl: false,
+          streetViewControl: false
+        });
+        var marker = new google.maps.Marker({
+          position: palacKino,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_JW5Tqr7w-zCrGCrcITa6V5oWkgyO85c&callback=initMap">
+    </script>
 
   <script src="assets/js/main.js"></script>
   <script type="text/javascript" src="assets/js/contact.js"></script>
