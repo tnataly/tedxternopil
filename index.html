@@ -103,8 +103,6 @@
           <!-- <a href="https://tickerry.com/event/tedxternopil-scenario-small-cities/" class="btn btn-ted">Придбати квиток</a> -->
         </div><!-- col-sm-6>
       </div><!-- row -->
-      <div class="row">
-      </div>
     </div><!-- container -->
   </section>
 
@@ -358,6 +356,7 @@
     </div><!-- timeline -->
 
   </section>
+  <hr>
 
   <!-- Partners
   =============================== -->
@@ -856,36 +855,15 @@
     <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!-- <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.4/jquery.min.js"></script> -->
   <script src="assets/js/jquery-2.2.4.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
 
-  <!-- Google maps JavaScript
-  ================================================== -->
-  <script>
-      function initMap() {
-        var palacKino = {lat: 49.554508, lng: 25.597816};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 18,
-          center: palacKino,
-          scrollwheel: false,
-          zoomControl : false,
-          mapTypeControl: false,
-          streetViewControl: false
-        });
-        var marker = new google.maps.Marker({
-          position: palacKino,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_JW5Tqr7w-zCrGCrcITa6V5oWkgyO85c&callback=initMap">
-    </script>
-
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_JW5Tqr7w-zCrGCrcITa6V5oWkgyO85c"></script>
   <script src="assets/js/main.js"></script>
   <script type="text/javascript" src="assets/js/contact.js"></script>
-  <script type="text/javascript" src="assets/js/va"></script>
+  <!-- cause error path: "assets/js/va"-->
+  <!-- <script type="text/javascript" src="assets/js/va"></script> -->
 
 </body>
 </html>
