@@ -96,10 +96,13 @@ h4 {
   padding-top: 50px;
 }
 
-.banner-text {
-  margin-top: 100px;
-  margin-left: 50px;
+.row {
+  width: 100%;
+}
 
+.banner-text {
+  margin-top: 150px;
+  padding-left: 50px;
 }
 
 .banner-text h1 {
@@ -120,7 +123,8 @@ h4 {
 
 ul.home-social-links {
   list-style-type: none;
-
+  position: absolute;
+  right: 15px;
 }
 
 .home-social-links > li > a {
@@ -151,7 +155,10 @@ ul.home-social-links {
   cursor: pointer;
   padding-left: 25px;
   padding-right: 25px;
+}
 
+#speakers .row {
+  margin-bottom: 50px;
 }
 
 .speaker-image {
@@ -196,6 +203,7 @@ ul.home-social-links {
 
 .speaker h3:hover {
   font-size: 1.313em;
+  box-sizing: border-box;
 }
 
 .speaker a:hover, .speaker a:active, .speaker a:focus {
@@ -347,6 +355,16 @@ ul.home-social-links {
 
 .news-item img {
   max-height: 60%;
+}
+
+hr { 
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+  margin: 100px 80px 0 80px;
 }
 
 /*--------------------------------------------------------------

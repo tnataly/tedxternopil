@@ -1,40 +1,22 @@
 $(function() {
 
-// Display a google map inside the venue section
-/*
-  function init_map() {
-    var var_location = new google.maps.LatLng(49.554557, 25.597648);
-    var var_center = new google.maps.LatLng(49.554643, 25.600495);
-
-    var var_mapoptions = {
-      center: var_center,
+  // Display a google map inside the venue section
+  function initMap() {
+    var palacKino = {lat: 49.554508, lng: 25.597816};
+    var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 18,
-      scaleControl: false,
-      streetViewControl: false,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-
-    };
-
-    var var_marker = new google.maps.Marker({
-      position: var_location,
-      map: var_map,
-      title:"Палац кіно",
-      draggable: false,
-      animation: google.maps.Animation.DROP
+      center: palacKino,
+      scrollwheel: false,
+      zoomControl : false,
+      mapTypeControl: false,
+      streetViewControl: false
     });
+    var marker = new google.maps.Marker({
+      position: palacKino,
+      map: map
+    });
+  }
 
-    var var_map = new google.maps.Map(document.getElementById("map"),
-        var_mapoptions);
-
-    var_marker.setMap(var_map);
-
-      }
-
-
-    google.maps.event.addDomListener(window, 'load', init_map);
-*/
- // Preloader or something else....
-
-
+  google.maps.event.addDomListener(window, 'load', initMap);
 
 });
